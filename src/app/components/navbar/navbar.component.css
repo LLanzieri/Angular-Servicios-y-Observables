@@ -1,0 +1,23 @@
+.sidenav-container{  
+    height: 100%;
+}
+
+.desplegable{
+    background-color: #c0c0bd;
+    border-right: 1px solid black;
+}
+
+.lista{
+    /* border: 1px solid blue; */
+}
+
+.entrada{
+    /* border: 1px solid red; */
+    margin: 10px 0;    
+}
+
+.contenido{
+    /* background-color: black; */
+}
+
+

@@ -1,0 +1,13 @@
+.toolbar{
+    background-color: #c0c0bd;
+    border-bottom: 1px solid black;
+}
+
+.gap {
+    margin-right: 10px;
+    
+ }
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

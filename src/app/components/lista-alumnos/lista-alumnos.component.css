@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.table-container{
+    padding: 15px;
+}
+
+.example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
+
+.alumnoAprobado{ 
+    color: green;
+    width: 15%;
+    text-align: center;
+    
+}
+
+.alumnoDesaprobado{
+   color: red;
+    width: 15%;
+    text-align: center;
+    
+}
+
+.btn-container{
+    /* border: 1px solid blue; */
+    margin: 10px 0; 
+    text-align: center;   
+}

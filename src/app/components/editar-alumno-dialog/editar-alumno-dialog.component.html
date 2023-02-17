@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>Editar información de alumno</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="formularioEditarAlumno">
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['nombre'].dirty && this.formularioEditarAlumno.controls['nombre'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['nombre'].dirty && formularioEditarAlumno.controls['nombre'].errors?.['pattern']">
+                Ingresar solamente letras
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido">
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['apellido'].dirty && this.formularioEditarAlumno.controls['apellido'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['apellido'].dirty && formularioEditarAlumno.controls['apellido'].errors?.['pattern']">
+                Ingresar solamente letras
+            </mat-error>
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Edad</mat-label>
+            <input matInput formControlName="edad">
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['edad'].dirty && this.formularioEditarAlumno.controls['edad'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioEditarAlumno.controls['edad'].dirty && formularioEditarAlumno.controls['edad'].errors?.['pattern']">
+                Formato permitido: 2 dígitos
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Estado Curso</mat-label>
+            <mat-select formControlName="cursoAprobado">
+                <mat-option *ngFor="let opcion of opciones" [value]="opcion.valor">
+                    {{opcion.textoDesplegado}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </form>
+</div>
+<div mat-dialog-actions>
+    <div class="botones">
+        <button mat-raised-button color="primary" (click)="editarAlumno()">Confirmar</button>
+        <button mat-raised-button color="warn" (click)="cerrarDialog()">Cerrar</button>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.cards-container{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+.example-card {
+    border: 1px solid grey;
+    margin: 10px;
+  }
+
+  .header-card{
+    
+    border-bottom: 1px solid grey;
+  }
+
+.img-container{
+    /* border: 1px solid blue; */
+    padding: 10px;
+    height: 200px;
+}
+
+.img-container img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+  
+.example-header-image {
+    background-image: url('../../../assets/perfil.png');
+    background-size: cover;
+}

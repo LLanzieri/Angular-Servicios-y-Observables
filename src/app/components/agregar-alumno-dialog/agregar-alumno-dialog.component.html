@@ -1,0 +1,83 @@
+<h1 mat-dialog-title>Agregar nuevo alumno</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="formularioAgregarAlumno">
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>DNI</mat-label>
+            <input matInput formControlName="dni">
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['dni'].dirty && this.formularioAgregarAlumno.controls['dni'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['dni'].dirty && formularioAgregarAlumno.controls['dni'].errors?.['pattern']">
+                Ingresar solamente números
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput formControlName="nombre">
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['nombre'].dirty && this.formularioAgregarAlumno.controls['nombre'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['nombre'].dirty && formularioAgregarAlumno.controls['nombre'].errors?.['pattern']">
+                Ingresar solamente letras
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Apellido</mat-label>
+            <input matInput formControlName="apellido">
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['apellido'].dirty && this.formularioAgregarAlumno.controls['apellido'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['apellido'].dirty && formularioAgregarAlumno.controls['apellido'].errors?.['pattern']">
+                Ingresar solamente letras
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Edad</mat-label>
+            <input matInput formControlName="edad">
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['edad'].dirty && this.formularioAgregarAlumno.controls['edad'].errors?.['required']">
+                Campo obligatorio
+            </mat-error>
+
+            <mat-error
+                *ngIf="this.formularioAgregarAlumno.controls['edad'].dirty && formularioAgregarAlumno.controls['edad'].errors?.['pattern']">
+                Formato permitido: 2 dígitos
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Estado Curso</mat-label>
+            <mat-select formControlName="cursoAprobado">
+                <mat-option *ngFor="let opcion of opciones" [value]="opcion.valor">
+                    {{opcion.textoDesplegado}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <div class="botones">
+        <button mat-raised-button color="primary" (click)="agregarAlumno()">Confirmar</button>
+        <button mat-raised-button color="warn" (click)="cerrarDialog()">Cerrar</button>
+    </div>
+</div>

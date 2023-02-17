@@ -1,0 +1,25 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav mode="side" class="desplegable" [(opened)]="estadoMenuNav">
+        <mat-nav-list class="lista">
+
+            <div class="entrada">
+                <a mat-list-item>OPCIÓN 1</a>
+            </div>
+            <div class="entrada">
+                <a mat-list-item>OPCIÓN 2</a>
+            </div>
+            <div class="entrada">
+                <a mat-list-item>OPCIÓN 3</a>
+            </div>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="contenido">
+
+        <app-lista-cards></app-lista-cards>
+        <app-lista-alumnos></app-lista-alumnos>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>
